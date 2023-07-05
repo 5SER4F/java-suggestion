@@ -1,10 +1,10 @@
 --Добавить тестовых сотрудников
 INSERT INTO EMPLOYEE
-(NAME)
+(NAME, PASSWORD, TITLE)
 VALUES
-('Emoloyee1'),
-('Emoloyee2'),
-('Emoloyee3');
+('Emoloyee1', '123', 'WORKER'),
+('Emoloyee2', '123', 'WORKER'),
+('Emoloyee3', '123', 'MANAGER');
 
 --Добавить статусы
 INSERT INTO STATUSES

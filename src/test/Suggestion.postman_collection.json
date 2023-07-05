@@ -1,0 +1,374 @@
+{
+	"info": {
+		"_postman_id": "67236376-fb9e-49cf-8150-e8526f029c64",
+		"name": "Suggestion",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "27011369",
+		"_collection_link": "https://red-desert-75551.postman.co/workspace/da849502-ade3-4a2e-bb67-99b7b9637ba8/collection/27011369-67236376-fb9e-49cf-8150-e8526f029c64?action=share&creator=27011369&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Author Worker 1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// pm.test(\"Status code is 200 or 201\", function () {\r",
+							"//     pm.expect(pm.response.code).to.be.oneOf([200,201]);\r",
+							"// });\r",
+							"// pm.test(\"Has user create response\", function () {\r",
+							"//     pm.response.to.be.withBody;\r",
+							"//     pm.response.to.be.json;\r",
+							"// });\r",
+							"// pm.test(\"Test user 'id' field\", function () {\r",
+							"//     var jsonData = pm.response.json();\r",
+							"//     pm.expect(jsonData).to.have.property('id');\r",
+							"//     pm.expect(jsonData.id, '\"id\" must be 1').to.eql(1);\r",
+							"// });\r",
+							"// pm.test(\"Test user 'email' field\", function () {\r",
+							"//     var jsonData = pm.response.json();\r",
+							"//     pm.expect(jsonData).to.have.property('email');\r",
+							"//     pm.expect(jsonData.email, '\"email\" must be \"mail@mail.ru\"').to.eql('mail@mail.ru');\r",
+							"// });\r",
+							"// pm.test(\"Test user 'name' field\", function () {\r",
+							"//     var jsonData = pm.response.json();\r",
+							"//     pm.expect(jsonData).to.have.property('name');\r",
+							"//     pm.expect(jsonData.name, '\"name\" must be \"Nick Name\"').to.eql('Nick Name');\r",
+							"// });\r",
+							"// pm.test(\"Test user 'login' field\", function () {\r",
+							"//     var jsonData = pm.response.json();\r",
+							"//     pm.expect(jsonData).to.have.property('login');\r",
+							"//     pm.expect(jsonData.login, '\"login\" field must be \"dolore\"').to.eql('dolore');    \r",
+							"// });\r",
+							"// pm.test(\"Test user 'birthday' field\", function () {\r",
+							"//     var jsonData = pm.response.json();\r",
+							"//     pm.expect(jsonData).to.have.property('birthday');\r",
+							"//     pm.expect(jsonData.birthday, '\"birthday\" field must be \"1946-08-20\"').to.eql('1946-08-20');\r",
+							"// });"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Emoloyee1\",\n  \"password\": \"123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/auth/login"
+			},
+			"response": []
+		},
+		{
+			"name": "Hello Worker 1",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJFbW9sb3llZTEiLCJleHAiOjE2ODg1NzM5MjcsInRpdGxlIjpbIldPUktFUiJdLCJuYW1lIjoiRW1vbG95ZWUxIn0.ftu6vV15-Yvpv3jv2xB3IwF3Qv14D4g2bjYR_rfaMMnDvLwN2wNMHfAeFTaHJogPZh0yN7ImPEHfRk_IMfeXsA"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/api/hello/worker"
+			},
+			"response": []
+		},
+		{
+			"name": "Worker 1 addSuggestion id = 1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// pm.test(\"Status code is 200 or 201\", function () {\r",
+							"//     pm.expect(pm.response.code).to.be.oneOf([200,201]);\r",
+							"// });\r",
+							"// pm.test(\"Has user create response\", function () {\r",
+							"//     pm.response.to.be.withBody;\r",
+							"//     pm.response.to.be.json;\r",
+							"// });\r",
+							"// pm.test(\"Test user 'id' field\", function () {\r",
+							"//     var jsonData = pm.response.json();\r",
+							"//     pm.expect(jsonData).to.have.property('id');\r",
+							"//     pm.expect(jsonData.id, '\"id\" must be 1').to.eql(1);\r",
+							"// });\r",
+							"// pm.test(\"Test user 'email' field\", function () {\r",
+							"//     var jsonData = pm.response.json();\r",
+							"//     pm.expect(jsonData).to.have.property('email');\r",
+							"//     pm.expect(jsonData.email, '\"email\" must be \"mail@mail.ru\"').to.eql('mail@mail.ru');\r",
+							"// });\r",
+							"// pm.test(\"Test user 'name' field\", function () {\r",
+							"//     var jsonData = pm.response.json();\r",
+							"//     pm.expect(jsonData).to.have.property('name');\r",
+							"//     pm.expect(jsonData.name, '\"name\" must be \"Nick Name\"').to.eql('Nick Name');\r",
+							"// });\r",
+							"// pm.test(\"Test user 'login' field\", function () {\r",
+							"//     var jsonData = pm.response.json();\r",
+							"//     pm.expect(jsonData).to.have.property('login');\r",
+							"//     pm.expect(jsonData.login, '\"login\" field must be \"dolore\"').to.eql('dolore');    \r",
+							"// });\r",
+							"// pm.test(\"Test user 'birthday' field\", function () {\r",
+							"//     var jsonData = pm.response.json();\r",
+							"//     pm.expect(jsonData).to.have.property('birthday');\r",
+							"//     pm.expect(jsonData.birthday, '\"birthday\" field must be \"1946-08-20\"').to.eql('1946-08-20');\r",
+							"// });"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJFbW9sb3llZTEiLCJleHAiOjE2ODg1NzUyMDQsInRpdGxlIjpbIldPUktFUiJdLCJuYW1lIjoiRW1vbG95ZWUxIn0.8-sxUV5ZFRXY2dnYs4s3h-ClQZcMYdC313ajPGQGaSf8yvbqsZfMuUbjMNvw8a4V49hsg1zffK2bsIsdfJG5IQ"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"employeId\" : 1,\n    \"topic\" : \"Topic 1\",\n    \"content\" : \"Content 1\",\n    \"statusId\" : 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/suggestions"
+			},
+			"response": []
+		},
+		{
+			"name": "Worker 1 getSuggestion id = 1",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJFbW9sb3llZTEiLCJleHAiOjE2ODg1NzUyMDQsInRpdGxlIjpbIldPUktFUiJdLCJuYW1lIjoiRW1vbG95ZWUxIn0.8-sxUV5ZFRXY2dnYs4s3h-ClQZcMYdC313ajPGQGaSf8yvbqsZfMuUbjMNvw8a4V49hsg1zffK2bsIsdfJG5IQ"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/suggestions/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Worker 1 get All Suggestion",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJFbW9sb3llZTEiLCJleHAiOjE2ODg1NzM5MjcsInRpdGxlIjpbIldPUktFUiJdLCJuYW1lIjoiRW1vbG95ZWUxIn0.ftu6vV15-Yvpv3jv2xB3IwF3Qv14D4g2bjYR_rfaMMnDvLwN2wNMHfAeFTaHJogPZh0yN7ImPEHfRk_IMfeXsA"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/suggestions"
+			},
+			"response": []
+		},
+		{
+			"name": "Author Manager 3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200 or 201\", function () {\r",
+							"    pm.expect(pm.response.code).to.be.oneOf([200,201]);\r",
+							"});\r",
+							"pm.test(\"Has user create response\", function () {\r",
+							"    pm.response.to.be.withBody;\r",
+							"    pm.response.to.be.json;\r",
+							"});\r",
+							"pm.test(\"Test user 'id' field\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData).to.have.property('id');\r",
+							"    pm.expect(jsonData.id, '\"id\" must be 1').to.eql(1);\r",
+							"});\r",
+							"pm.test(\"Test user 'email' field\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData).to.have.property('email');\r",
+							"    pm.expect(jsonData.email, '\"email\" must be \"mail@mail.ru\"').to.eql('mail@mail.ru');\r",
+							"});\r",
+							"pm.test(\"Test user 'name' field\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData).to.have.property('name');\r",
+							"    pm.expect(jsonData.name, '\"name\" must be \"Nick Name\"').to.eql('Nick Name');\r",
+							"});\r",
+							"pm.test(\"Test user 'login' field\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData).to.have.property('login');\r",
+							"    pm.expect(jsonData.login, '\"login\" field must be \"dolore\"').to.eql('dolore');    \r",
+							"});\r",
+							"pm.test(\"Test user 'birthday' field\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData).to.have.property('birthday');\r",
+							"    pm.expect(jsonData.birthday, '\"birthday\" field must be \"1946-08-20\"').to.eql('1946-08-20');\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Emoloyee3\",\n  \"password\": \"123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/auth/login"
+			},
+			"response": []
+		},
+		{
+			"name": "Hello Manager 3",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJFbW9sb3llZTMiLCJleHAiOjE2ODg1NzUyMjUsInRpdGxlIjpbIk1BTkFHRVIiXSwibmFtZSI6IkVtb2xveWVlMyJ9.5Vjr2lpcrXvSMfgeGlMtPzBnr62-rMqb62qgJAetixUVvG5QEZ9D6J8zhrrtQG56gxD2632X-nK19zy7BEPyLQ"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/api/hello/manager"
+			},
+			"response": []
+		},
+		{
+			"name": "Manager3 add review to sugg1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200 or 201\", function () {\r",
+							"    pm.expect(pm.response.code).to.be.oneOf([200,201]);\r",
+							"});\r",
+							"pm.test(\"Has user create response\", function () {\r",
+							"    pm.response.to.be.withBody;\r",
+							"    pm.response.to.be.json;\r",
+							"});\r",
+							"pm.test(\"Test user 'id' field\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData).to.have.property('id');\r",
+							"    pm.expect(jsonData.id, '\"id\" must be 1').to.eql(1);\r",
+							"});\r",
+							"pm.test(\"Test user 'email' field\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData).to.have.property('email');\r",
+							"    pm.expect(jsonData.email, '\"email\" must be \"mail@mail.ru\"').to.eql('mail@mail.ru');\r",
+							"});\r",
+							"pm.test(\"Test user 'name' field\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData).to.have.property('name');\r",
+							"    pm.expect(jsonData.name, '\"name\" must be \"Nick Name\"').to.eql('Nick Name');\r",
+							"});\r",
+							"pm.test(\"Test user 'login' field\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData).to.have.property('login');\r",
+							"    pm.expect(jsonData.login, '\"login\" field must be \"dolore\"').to.eql('dolore');    \r",
+							"});\r",
+							"pm.test(\"Test user 'birthday' field\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData).to.have.property('birthday');\r",
+							"    pm.expect(jsonData.birthday, '\"birthday\" field must be \"1946-08-20\"').to.eql('1946-08-20');\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJFbW9sb3llZTMiLCJleHAiOjE2ODg1NzUyMjUsInRpdGxlIjpbIk1BTkFHRVIiXSwibmFtZSI6IkVtb2xveWVlMyJ9.5Vjr2lpcrXvSMfgeGlMtPzBnr62-rMqb62qgJAetixUVvG5QEZ9D6J8zhrrtQG56gxD2632X-nK19zy7BEPyLQ"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"employeId\": 3,\n  \"suggestionId\": 1,\n  \"content\": \"Review1 content\",\n  \"approve\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/reviews"
+			},
+			"response": []
+		},
+		{
+			"name": "Mannager3 get review id=1",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJFbW9sb3llZTMiLCJleHAiOjE2ODg1NzUyMjUsInRpdGxlIjpbIk1BTkFHRVIiXSwibmFtZSI6IkVtb2xveWVlMyJ9.5Vjr2lpcrXvSMfgeGlMtPzBnr62-rMqb62qgJAetixUVvG5QEZ9D6J8zhrrtQG56gxD2632X-nK19zy7BEPyLQ"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/reviews/1"
+			},
+			"response": []
+		}
+	]
+}
