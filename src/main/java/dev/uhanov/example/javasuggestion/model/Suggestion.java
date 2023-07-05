@@ -1,9 +1,7 @@
 package dev.uhanov.example.javasuggestion.model;
 
-import com.fasterxml.jackson.annotation.JacksonInject;
 import lombok.Builder;
 import lombok.Data;
-import org.springframework.boot.context.properties.bind.DefaultValue;
 
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
@@ -26,8 +24,8 @@ public class Suggestion {
 
     public Map<String, Object> toMap() {
         return Map.of(
-                "employe_id",  employeId,
-                "topic",  topic,
+                "employe_id", employeId,
+                "topic", topic,
                 "content", content,
                 "last_update", Timestamp.from(lastUpdate),
                 "status_id", statusId

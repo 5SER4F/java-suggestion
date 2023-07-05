@@ -2,7 +2,6 @@ package dev.uhanov.example.javasuggestion.dao.dbImp;
 
 import dev.uhanov.example.javasuggestion.dao.SuggestionStorage;
 import dev.uhanov.example.javasuggestion.exception.ResourceNotExistException;
-import dev.uhanov.example.javasuggestion.exception.SQLAccessException;
 import dev.uhanov.example.javasuggestion.model.Suggestion;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;

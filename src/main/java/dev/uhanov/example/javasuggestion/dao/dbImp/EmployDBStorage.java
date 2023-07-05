@@ -14,6 +14,7 @@ import java.util.Set;
 @RequiredArgsConstructor
 public class EmployDBStorage implements EmployeeStorage {
     private final JdbcTemplate jdbcTemplate;
+
     @Override
     public Optional<Employ> getEmployeByName(String name) {
         String sqlQuery = "SELECT ID, PASSWORD, TITLE " +
